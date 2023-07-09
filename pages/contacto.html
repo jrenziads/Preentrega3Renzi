@@ -64,34 +64,50 @@
         </div>
       </div>
     </div>
-    <div class="half-width row">
-      <section class="noticias-container col-md-6">
-        <form action="" class="contacto">
-          <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre">
-          </div>
-          <div>
-            <label for="E-Mail">E-Mail</label>
-            <input type="email">
-          </div>
-          <div>
-            <label for="Telefono">Telefono</label>
-            <input type="tel">
-          </div>
-          <div>
-            <label for="Mensaje">Mensaje</label>
-            <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
-          </div>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-      <section class="noticias-container col-md-6">
-        <div class="noticia">
-          <!-- aca va lo que quiero del otro lado -->
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Dirección 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Estado</label>
+        <select id="inputState" class="form-select">
+          <option selected>Elige...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Código postal</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Verifícame
+          </label>
         </div>
-      </section>
-    </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </div>
+    </form>
   </main>
   
   <footer>
