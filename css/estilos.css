@@ -8,7 +8,7 @@
 
 /* Encabezado */
 header {
-  background-color: #e60012;
+  background-color: red;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -53,6 +53,10 @@ footer .footer-content {
 footer .social-media {
   float: left;
 }
+footer .social-media a {
+  text-decoration: none;
+  color: #fff;
+}
 footer .contact-info {
   float: right;
 }
@@ -74,171 +78,141 @@ footer .contact-info p {
   line-height: 1.5;
 }
 
+/* Estilos del body */
 body {
   font-family: "Bebas Neue", sans-serif;
   margin: 0;
   padding: 0;
-  /* Contenido principal */
 }
-body main {
+
+/* Mixin para estilos de texto */
+/* Mixin para estilos de botón */
+/* Contenido principal */
+main {
   padding: 20px;
   overflow: hidden;
+  /* Estilos para la sección de vehículos */
   /* Media Queries */
 }
-body main section {
+main section {
   margin-bottom: 40px;
 }
-body main h1,
-body main h2,
-body main h3 {
+main h1, main h2, main h3 {
   margin: 0;
   padding: 0;
   text-align: center;
 }
-body main .vehiculos-section {
+main .vehiculos-section {
   background-color: #f2f2f2;
   padding: 30px;
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
 }
-body main .vehiculos-section .contacto {
-  background-color: #f2f2f2;
-  padding: 30px;
-  margin: 0;
+main .vehiculos-section .contacto {
+  font-weight: bold;
+  color: #333;
 }
-body main .vehiculos-section .contacto label {
+main .vehiculos-section .contacto label {
   margin-bottom: 5px;
   display: block;
 }
-body main .vehiculos-section .contacto input,
-body main .vehiculos-section .contacto textarea {
+main .vehiculos-section .contacto input, main .vehiculos-section .contacto textarea {
   margin-bottom: 10px;
   padding: 5px;
   display: flex;
   width: 100%;
   box-sizing: border-box;
 }
-body main .vehiculos-section .contacto button {
+main .vehiculos-section .contacto button {
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
 }
-body main .vehiculos-section .logo div {
-  background-color: #f2f2f2;
-  padding: 30px;
+main .vehiculos-section .logo div {
+  font-weight: bold;
+  color: #333;
 }
-body main .vehiculos-section .logo div h2 {
-  background-color: #f2f2f2;
+main .vehiculos-section .logo div h2 {
+  font-weight: bold;
+  color: #333;
   padding: 20px;
   text-align: center;
 }
-body main .vehiculos-section .vehiculos-container {
+main .vehiculos-section .vehiculos-container {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
 }
-body main .vehiculos-section .vehiculos-container .vehiculo {
+main .vehiculos-section .vehiculos-container .vehiculo {
   flex: 1;
   margin-right: 0px;
 }
-body main .vehiculos-section .vehiculos-container .vehiculo img {
+main .vehiculos-section .vehiculos-container .vehiculo img {
   width: 100%;
   border-radius: 5px;
 }
-body main .noticias-container {
+main .noticias-container {
   width: 50%;
   float: left;
 }
-body main .video-container {
+main .video-container {
   width: 50%;
   float: right;
 }
-body main .video-container iframe {
+main .video-container iframe {
   width: 100%;
 }
 @media (max-width: 768px) {
-  body main {
-    /* Agregar esta regla para que los iframes se vean uno abajo del otro en la versión móvil */
-  }
-  body main .logo img {
+  main .logo img {
     width: 100px;
   }
-  body main .menu {
+  main .menu {
     display: none;
   }
-  body main .logo div {
+  main .logo div {
     padding: 10px;
   }
-  body main .noticias-container,
-  body main .video-container {
+  main .noticias-container,
+  main .video-container {
     width: 100%;
     float: none;
   }
-  body main .video-container {
+  main .video-container {
     float: none;
   }
 }
 @media (max-width: 600px) {
-  body main {
-    /* Asegurarse de que los iframes también tengan el ancho del 100% en la versión móvil */
-  }
-  body main .vehiculos-section {
+  main .vehiculos-section {
     flex-direction: column;
   }
-  body main .vehiculos-container {
+  main .vehiculos-container {
     flex-direction: column;
   }
-  body main .vehiculos-container .vehiculo {
+  main .vehiculos-container .vehiculo {
     margin-right: 0;
     margin-bottom: 20px;
   }
-  body main .video-container iframe {
+  main .video-container iframe {
     width: 100%;
   }
-}
-body .vehiculos-section div label {
-  display: inline-block;
-  width: 80px;
-}
-body .fcc-btn {
-  background-color: red;
-  color: white;
-  width: 100%;
-  text-align: center;
-  text-decoration-style: solid;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .logo img {
-    width: 100px;
-  }
-  .menu {
-    display: none;
-  }
-  .logo div {
-    padding: 10px;
-  }
-  .noticias-container,
-  .video-container {
-    width: 100%;
-    float: none;
-  }
+/* Estilos para el botón .fcc-btn */
+.fcc-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
-@media (max-width: 600px) {
-  .vehiculos-section {
-    flex-direction: column;
-  }
-  .vehiculos-container {
-    flex-direction: column;
-  }
-  .vehiculos-container .vehiculo {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
+
+/* Estilos para los títulos h1, h2, h3 */
+h1, h2, h3 {
+  font-weight: bold;
+  color: #333;
 }
 
 /*# sourceMappingURL=estilos.css.map */

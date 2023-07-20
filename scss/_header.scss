@@ -1,36 +1,44 @@
-  /* Encabezado */
-  header {
-    background-color: $color-header;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+// Variables
+$color-header: red;
 
-    .logo img {
-      width: 150px;
-    }
+// Mixin para estilos de enlace del menú
+@mixin menu-link-style {
+  text-decoration: none;
+  color: #fff;
+}
 
-    .menu:hover {
-      text-align: right;
-      transform: scale(1.1);
-      cursor: pointer;
-      box-shadow: 0 0 10px red;
-    }
+/* Encabezado */
+header {
+  background-color: $color-header;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .menu ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+  .logo img {
+    width: 150px;
+  }
 
-      li {
-        display: inline-block;
-        margin-left: 10px;
+  .menu:hover {
+    text-align: right;
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+  }
 
-        a {
-          text-decoration: none;
-          color: #fff;
-        }
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-left: 10px;
+
+      a {
+        @include menu-link-style; // Uso del mixin para los enlaces del menú
       }
     }
   }
+}

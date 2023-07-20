@@ -1,158 +1,110 @@
+/* Estilos del body */
 body {
   font-family: 'Bebas Neue', sans-serif;
   margin: 0;
   padding: 0;
+}
 
-  /* Contenido principal */
-  main {
-    padding: 20px;
-    overflow: hidden;
+/* Mixin para estilos de texto */
+@mixin text-emphasis {
+  font-weight: bold;
+  color: #333;
+}
 
-    section {
-      margin-bottom: 40px;
+/* Mixin para estilos de botón */
+@mixin button-style {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Contenido principal */
+main {
+  padding: 20px;
+  overflow: hidden;
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Estilos para la sección de vehículos */
+  .vehiculos-section {
+    background-color: #f2f2f2;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
+    .contacto {
+      @include text-emphasis;
+
+      label {
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input, textarea {
+        margin-bottom: 10px;
+        padding: 5px;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      button {
+        @include button-style;
+      }
     }
 
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      padding: 0;
-      text-align: center;
+    .logo div {
+      @include text-emphasis;
+
+      h2 {
+        @include text-emphasis;
+        padding: 20px;
+        text-align: center;
+      }
     }
 
-    .vehiculos-section {
-      background-color: #f2f2f2;
-      padding: 30px;
+    .vehiculos-container {
       display: flex;
       flex-wrap: wrap-reverse;
       justify-content: center;
 
-      .contacto {
-        background-color: #f2f2f2;
-        padding: 30px;
-        margin: 0;
+      .vehiculo {
+        flex: 1;
+        margin-right: 0px;
 
-        label {
-          margin-bottom: 5px;
-          display: block;
-        }
-
-        input,
-        textarea {
-          margin-bottom: 10px;
-          padding: 5px;
-          display: flex;
+        img {
           width: 100%;
-          box-sizing: border-box;
+          border-radius: 5px;
         }
-
-        button {
-          padding: 10px 20px;
-          background-color: #4CAF50;
-          color: white;
-          border: none;
-          cursor: pointer;
-        }
-      }
-
-      .logo div {
-        background-color: #f2f2f2;
-        padding: 30px;
-
-        h2 {
-          background-color: #f2f2f2;
-          padding: 20px;
-          text-align: center;
-        }
-      }
-
-      .vehiculos-container {
-        display: flex;
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-
-        .vehiculo {
-          flex: 1;
-          margin-right: 0px;
-
-          img {
-            width: 100%;
-            border-radius: 5px;
-          }
-        }
-      }
-    }
-
-    .noticias-container {
-      width: 50%;
-      float: left;
-    }
-    .video-container {
-      width: 50%;
-      float: right;
-  
-      iframe {
-        width: 100%;
-      }
-    }
-  
-    /* Media Queries */
-    @media (max-width: 768px) {
-      .logo img {
-        width: 100px;
-      }
-      .menu {
-        display: none;
-      }
-      .logo div {
-        padding: 10px;
-      }
-      .noticias-container,
-      .video-container {
-        width: 100%;
-        float: none;
-      }
-  
-      /* Agregar esta regla para que los iframes se vean uno abajo del otro en la versión móvil */
-      .video-container {
-        float: none;
-      }
-    }
-  
-    @media (max-width: 600px) {
-      .vehiculos-section {
-        flex-direction: column;
-      }
-      .vehiculos-container {
-        flex-direction: column;
-        .vehiculo {
-          margin-right: 0;
-          margin-bottom: 20px;
-        }
-      }
-  
-      /* Asegurarse de que los iframes también tengan el ancho del 100% en la versión móvil */
-      .video-container iframe {
-        width: 100%;
       }
     }
   }
 
-    .vehiculos-section div label {
-      display: inline-block;
-      width: 80px;
-    }
+  .noticias-container {
+    width: 50%;
+    float: left;
+  }
+  
+  .video-container {
+    width: 50%;
+    float: right;
 
-    .fcc-btn {
-      background-color: red;
-      color: white;
+    iframe {
       width: 100%;
-      text-align: center;
-      text-decoration-style: solid;
     }
   }
 
-  
   /* Media Queries */
   @media (max-width: 768px) {
     .logo img {
@@ -169,7 +121,12 @@ body {
       width: 100%;
       float: none;
     }
+
+    .video-container {
+      float: none;
+    }
   }
+
   @media (max-width: 600px) {
     .vehiculos-section {
       flex-direction: column;
@@ -181,4 +138,19 @@ body {
         margin-bottom: 20px;
       }
     }
+
+    .video-container iframe {
+      width: 100%;
+    }
   }
+}
+
+/* Estilos para el botón .fcc-btn */
+.fcc-btn {
+  @include button-style;
+}
+
+/* Estilos para los títulos h1, h2, h3 */
+h1, h2, h3 {
+  @include text-emphasis;
+}
