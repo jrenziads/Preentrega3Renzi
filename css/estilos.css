@@ -79,11 +79,11 @@ body {
   margin: 0;
   padding: 0;
   /* Contenido principal */
-  /* Media Queries */
 }
 body main {
   padding: 20px;
   overflow: hidden;
+  /* Media Queries */
 }
 body main section {
   margin-bottom: 40px;
@@ -159,41 +159,83 @@ body main .video-container {
 body main .video-container iframe {
   width: 100%;
 }
-body main .vehiculos-section div label {
+@media (max-width: 768px) {
+  body main {
+    /* Agregar esta regla para que los iframes se vean uno abajo del otro en la versión móvil */
+  }
+  body main .logo img {
+    width: 100px;
+  }
+  body main .menu {
+    display: none;
+  }
+  body main .logo div {
+    padding: 10px;
+  }
+  body main .noticias-container,
+  body main .video-container {
+    width: 100%;
+    float: none;
+  }
+  body main .video-container {
+    float: none;
+  }
+}
+@media (max-width: 600px) {
+  body main {
+    /* Asegurarse de que los iframes también tengan el ancho del 100% en la versión móvil */
+  }
+  body main .vehiculos-section {
+    flex-direction: column;
+  }
+  body main .vehiculos-container {
+    flex-direction: column;
+  }
+  body main .vehiculos-container .vehiculo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  body main .video-container iframe {
+    width: 100%;
+  }
+}
+body .vehiculos-section div label {
   display: inline-block;
   width: 80px;
 }
-body main .fcc-btn {
+body .fcc-btn {
   background-color: red;
   color: white;
   width: 100%;
   text-align: center;
   text-decoration-style: solid;
 }
+
+/* Media Queries */
 @media (max-width: 768px) {
-  body .logo img {
+  .logo img {
     width: 100px;
   }
-  body .menu {
+  .menu {
     display: none;
   }
-  body .logo div {
+  .logo div {
     padding: 10px;
   }
-  body .noticias-container,
-  body .video-container {
+  .noticias-container,
+  .video-container {
     width: 100%;
     float: none;
   }
 }
 @media (max-width: 600px) {
-  body .vehiculos-section {
+  .vehiculos-section {
     flex-direction: column;
   }
-  body .vehiculos-container {
+  .vehiculos-container {
     flex-direction: column;
   }
-  body .vehiculos-container .vehiculo {
+  .vehiculos-container .vehiculo {
     margin-right: 0;
     margin-bottom: 20px;
   }
